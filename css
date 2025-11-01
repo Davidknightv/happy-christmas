@@ -1,63 +1,82 @@
-/* Alapvető reszetelés */
+/* style.css */
+
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
+    margin: 0; 
     padding: 0;
-    background-color: #f4f4f4; /* Világos háttér */
+    background-color: #1a1a1a; 
+    color: #e0e0e0; 
 }
 
-/* --- Fejléc Kép Reszponzivitása --- */
-
 .header {
-    width: 100%; /* Kitölti a teljes szélességet */
-    overflow: hidden; /* Ha szükséges, elrejti a túllógó részt */
-    text-align: center; /* Középre igazítás */
+    width: 100%; 
+    overflow: hidden; 
+    text-align: center; 
     margin-bottom: 20px;
 }
 
 .header-image {
-    /* **A kulcs a reszponzivitáshoz:** */
-    max-width: 100%; /* A kép soha nem nyúlhat túl a szülő elemén */
-    height: auto; /* A magasság arányosan igazodik a szélességhez */
-    display: block; /* Eltávolítja az esetleges alul lévő extra helyet */
+    max-width: 100%; 
+    height: auto; 
+    display: block; 
 }
-
-/* --- Videó Szakasz és Konténerek Reszponzivitása --- */
 
 .video-section {
-    max-width: 1200px; /* Maximális szélesség a nagy képernyőkön, de közepes marad */
-    margin: 0 auto; /* Középre igazítás */
-    padding: 10px;
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 20px; 
+    background-color: #242424; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
 }
 
+/* FŐCÍM (H1) MÉRETÉNEK CSÖKKENTÉSE */
 h1 {
     text-align: center;
-    color: #333;
+    color: #ffffff;
+    /* Méret: 2.2 rem (kb. 35-40px, a böngésző alapbeállításától függően) */
+    font-size: 2.2rem; 
     padding-bottom: 15px;
 }
 
+/* ALCÍMEK (H2) MÉRETÉNEK CSÖKKENTÉSE */
 h2 {
-    color: #555;
+    color: #ffffff;
     margin-top: 30px;
-    border-bottom: 2px solid #ccc;
+    /* Méret: 1.6 rem (kb. 25-28px) */
+    font-size: 1.6rem;
+    border-bottom: 2px solid #555; 
     padding-bottom: 5px;
+}
+
+/* BEKEZDÉSEK (P) MÉRETÉNEK NÖVELÉSE A JOBB OLVASHATÓSÁGÉRT */
+p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+    /* Méret: 1.1 rem (kb. 17-18px) */
+    font-size: 1.1rem;
+    color: #f0f0f0; 
 }
 
 .video-container {
     margin-bottom: 40px;
-    /* A videó konténere automatikusan igazodik */
 }
 
 .responsive-video {
-    /* **A kulcs a videók reszponzivitásához:** */
-    width: 100%; /* A konténer teljes szélességét kitölti */
-    height: auto; /* A magasság arányosan igazodik */
-    display: block; /* Eltávolítja az esetleges alul lévő extra helyet */
+    width: 100%; 
+    height: auto; 
+    display: block; 
 }
 
-/* --- Kisebb Képernyőkre Optimalizálás (Mobil) --- */
 @media (max-width: 600px) {
     .video-section {
-        padding: 5px; /* Kisebb margók mobilon */
+        padding: 10px; 
+    }
+    /* Még kisebb méret mobilon */
+    h1 {
+        font-size: 1.8rem;
+    }
+    h2 {
+        font-size: 1.4rem;
     }
 }
